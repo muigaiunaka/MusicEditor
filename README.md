@@ -1,3 +1,9 @@
+*Project:* Music Editor
+*Stack:* Java
+*Team:* Muigai Unaka and Will Kent
+*Summary:* This project was my first dive into Software development using the Model-View-Controller Pattern. In my Object Oriented Design course I worked on this project for 6 weeks with my partner Will Kent.
+
+
 Music Editor Model
 By Will Kent & Muigai Unaka
 
