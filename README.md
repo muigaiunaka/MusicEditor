@@ -6,6 +6,16 @@
 
 **Summary:** This project was my first dive into Software development using the Model-View-Controller Pattern. In my Object Oriented Design course I worked on this project for 6 weeks with my partner Will Kent.
 
+## SETUP
+
+Running this program requires Java to be installed on your device. Download the MusicEditor.jar file. Open up the Command prompt or terminal and change into the directory that holds the jar file. Run this command:
+```java
+java -MusicEditorCollab.jar "mystery-2.txt" "audiovisual"
+```
+options for the first argument: "mystery-1.txt", "mystery-2.txt", "mystery-3.txt",
+
+options for the second argument: "audiovisual",
+
 
 Music Editor Model
 By Will Kent & Muigai Unaka
