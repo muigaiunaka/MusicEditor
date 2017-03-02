@@ -14,12 +14,11 @@ java -MusicEditorCollab.jar "mystery-2.txt" "audiovisual"
 ```
 *Options for the first argument:* "mystery-1.txt", "mystery-2.txt", "mystery-3.txt",
 
-*Options for the second argument:* "audiovisual",
+*Options for the second argument:* "audiovisual", "midi"
 
-## ----------------------------
+*More documentation to follow shortly*
 
-Music Editor Model
-By Will Kent & Muigai Unaka
+### Javadocs below
 
 ###MusicEditorModel interface
 
