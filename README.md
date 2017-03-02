@@ -4,11 +4,11 @@
 
 **Team:** Muigai Unaka and Will Kent
 
-**Summary:** This project was my first dive into Software development using the Model-View-Controller Pattern. In my Object Oriented Design course I worked on this project for 6 weeks with my partner Will Kent.
+**Summary:** This project was my first dive into Software development using the Model-View-Controller Design Pattern. I worked on this project for 6 weeks with my partner Will Kent.
 
 ## SETUP
 
-Running this program requires Java to be installed on your device. Download the MusicEditor.jar file. Open up the Command prompt or terminal and change into the directory that holds the jar file. Run this command:
+Running this program requires Java to be installed on your device. Download the MusicEditor.jar file in the root directory. Open up the Command prompt or terminal and change into the directory that holds the jar file. Run this command:
 ```java
 java -MusicEditorCollab.jar "mystery-2.txt" "audiovisual"
 ```
@@ -21,11 +21,9 @@ java -MusicEditorCollab.jar "mystery-2.txt" "audiovisual"
 Music Editor Model
 By Will Kent & Muigai Unaka
 
-MusicEditorModel interface
+###MusicEditorModel interface
+
 METHODS:
-We both had generic edit methods, we decided to ditch those and go with
-specific methods to edit notes.  We also added methods to get information about
-the model like getHighestBeat, getNotesStartingAt, getHighestNote and getLowestNote.
 
   void addNote(K note); Adds a note to the music editor’s tree map
 
@@ -62,15 +60,8 @@ the model like getHighestBeat, getNotesStartingAt, getHighestNote and getLowestN
 
   List<?> getPitches(); gets the range of pitches in the piece
 
-MusicEditorModelImpl:
+###MusicEditorModelImpl:
 MusicEditorModel is implemented by MusicEditorModelImpl.
-We decided to use a tree map for the notes.  This allows the notes to be fetched by beat in
-constant time.  The model keeps track of the length of the piece and the highest and lowest
-beats as well as a list of pitches.  These fields help to keep track of the bounds of the model
-as well as the range of notes by pitch and by beat.
-We added a list<Pitch> field to keep track of all of the pitches in the range of pitches.
-We also added methods to expand the length (beats) and range (pitches) of the music piece as
-notes are added.  The addNote() method is significantly more robust than before.
 
 FIELDS:
 	int length: the number of beats in the music piece
@@ -95,7 +86,7 @@ METHODS:
 
 	public boolean containsNote(Note note); Determines if this music piece contains the given note
 
-Private Class Builder
+###Private Class Builder
 	This class also contains a private static Builder class that sets the tempo and can add
 	notes and then constructs new MusicEditorModelImpls from that information.  The other fields
 	in the model are set based on the notes in the model (highest and lowest are the highest and
@@ -103,7 +94,7 @@ Private Class Builder
 	is a list of pitches from the pitch of the lowest note to the pitch of the highest note).
 
 
-Note:
+###Note:
 Note implements comparable
 	We decided not to include an end time for notes because it can be easily calculated from
 	the start time and the duration.  Having and end time as well as those two made keeping
@@ -146,8 +137,7 @@ METHODS:
 
 
 
-
-Pitch:
+###Pitch:
 Pitch implements comparable
 Pitch is a combination of an enum Tone which is C through GSHARP and an octave. There are two
 constructors for a pitch. One takes a Tone and an int octave and constructs the note from that.
@@ -171,7 +161,7 @@ METHODS:
   public Tone getTone(); get the tone of the pitch
 
 
-Tone:
+###Tone:
 Tone is an enumeration for each of the letters that represent pitches without octaves.
 
 METHODS:
@@ -186,7 +176,7 @@ METHODS:
   Tone getPrev();returns the previous letter in the enum and wraps if at the beginning
 
 
-View interface:
+###View interface:
 Most of the methods in the view interface are there to show the user where they are in the edit
 process.  The graphical views don’t do anything with these methods since they show all of the notes
 at once but the Midi view tracks through the beats and can play them individually or pause at
@@ -205,26 +195,5 @@ METHODS:
     void skip(); Skips to the end of the song
 
     void next(); Moves to the next beat
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
